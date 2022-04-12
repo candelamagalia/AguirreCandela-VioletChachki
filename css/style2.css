@@ -377,6 +377,12 @@
         border: none;
         border: 2px solid #256602;
         border-radius: 0.2em;
+        transition: border .2s;
+    }
+    
+    .formInput:focus {
+        border: 3px solid #57e40c;
+        ;
     }
     
     .formBoton {
@@ -400,6 +406,7 @@
         border: .2em;
         cursor: pointer;
         border-radius: 0.2em;
+        font-weight: bolder;
     }
     
     .looks {
