@@ -28,19 +28,21 @@
     .encabezado__logo__index,
     .encabezado__logo {
         font-family: 'Lobster', cursive;
-        font-size: 40px;
+        font-size: 2.5em;
         text-decoration: none;
         text-align: left;
         margin: 10px 10px 10px 10px;
+        z-index: 10;
         transition: filter .5s;
     }
     
     .encabezado__logo:hover {
         filter: brightness(1.3) contrast(1.3);
+        text-decoration: none;
     }
     
     .colorBlanco {
-        color: aliceblue;
+        color: aliceblue !important;
     }
     
     .encabezado__menu__index a,
@@ -65,17 +67,19 @@
         position: relative;
         right: 30px;
         position: fixed;
-        z-index: 2;
+        z-index: 10;
     }
     
     .encabezado__menu li :hover {
-        font-size: 120%;
+        font-size: 105%;
         filter: brightness(1.3) contrast(1.3);
+        text-decoration: none;
     }
     
     .encabezado__menu__index li:hover {
-        font-size: 120%;
+        font-size: 105%;
         filter: brightness(1.3) contrast(1.3);
+        text-decoration: none;
     }
     
     .encabezado__menu__index a {
@@ -116,11 +120,11 @@
     }
     
     .colorNegro {
-        color: black;
+        color: black !important;
     }
     
     .colorRosa {
-        color: #699fad;
+        color: #699fad !important;
     }
     
     .biografia {
@@ -130,7 +134,7 @@
     .biografia__1 {
         display: flex;
         width: 100%;
-        height: 700px;
+        height: 100%;
     }
     
     .biografia__1 section {
@@ -141,18 +145,22 @@
         margin-top: -5%;
     }
     
+    .biografia__1--texto1 {
+        font-size: 1rem;
+    }
+    
     .biografia__1--titulo {
         font-size: 7em;
     }
     
     .biografia__1 img {
         width: 50%;
-        height: auto;
+        height: 100%;
     }
     
     @supports(object-fit: cover) {
         .biografia__1 img {
-            height: 100%;
+            height: auto;
             object-fit: cover;
             object-position: top center;
         }
@@ -161,7 +169,7 @@
     .biografia__2 {
         display: flex;
         width: 100%;
-        height: 700px;
+        height: 100%;
     }
     
     .biografia__2 a {
@@ -183,7 +191,7 @@
     
     @supports(object-fit: cover) {
         .biografia__2 img {
-            height: 100%;
+            height: auto;
             object-fit: cover;
             object-position: top center;
         }
@@ -192,7 +200,7 @@
     .biografia__3 {
         display: flex;
         width: 100%;
-        height: 700px;
+        height: auto;
     }
     
     .biografia__3 a {
@@ -214,7 +222,7 @@
     
     @supports(object-fit: cover) {
         .biografia__3 img {
-            height: 100%;
+            height: auto;
             object-fit: cover;
             object-position: top center;
         }
@@ -235,11 +243,13 @@
     .drag__tabla {
         display: flex;
         width: 100%;
-        height: 700px;
+        height: auto;
+        margin: 2rem;
     }
     
     .drag__tabla h1 {
         width: 50%;
+        height: auto;
         font-family: 'Montserrat', sans-serif;
         line-height: normal;
         font-size: 6em;
@@ -249,7 +259,7 @@
     
     .encabezado__logo--drag {
         font-family: 'Lobster', cursive;
-        font-size: 40px;
+        font-size: 2.5em;
         text-shadow: 2px 2px 7px black, 2px 2px 7px black;
         text-decoration: none;
         text-align: left;
@@ -259,10 +269,12 @@
     
     .encabezado__logo--drag:hover {
         filter: brightness(1.3) contrast(1.3);
+        text-decoration: none;
     }
     
     .drag__tabla table {
         width: 50%;
+        height: auto;
         font-family: 'Montserrat', sans-serif;
         line-height: normal;
         text-align: center;
@@ -270,8 +282,8 @@
     
     .drag__img {
         display: flex;
-        width: 100%;
-        height: 700px;
+        width: 110%;
+        height: auto;
     }
     
     .drag__img img {
@@ -280,29 +292,33 @@
     
     @supports(object-fit: cover) {
         .drag__img img {
-            height: 100%;
+            height: auto;
             object-fit: cover;
             object-position: top center;
         }
     }
     
     .colorBeige {
-        color: #e7c9bf;
+        color: #e7c9bf !important;
     }
     
     .drag__frases {
         display: flex;
         width: 100%;
+        height: auto;
         font-family: 'Montserrat', sans-serif;
+        margin: 1rem;
     }
     
     .drag__frases ul {
         width: 50%;
+        height: auto;
         list-style: none;
     }
     
     .drag__frases h2 {
         width: 50%;
+        height: auto;
         font-family: 'Montserrat', sans-serif;
         line-height: normal;
         font-size: 6em;
@@ -320,24 +336,33 @@
     }
     
     .contacto__contenedor--textos {
+        display: flex;
+        flex-direction: column;
         width: 50%;
+        height: auto;
         line-height: normal;
         font-family: 'Montserrat', sans-serif;
     }
     
     .contacto__contenedor--textos h4 {
-        font-size: 100%;
-        margin: 0px;
+        display: flex;
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
         margin-top: 5%;
-        padding: 0px;
         color: aliceblue;
+        margin: 0%;
+        padding: 0%;
     }
     
     .contacto__contenedor--textos h1 {
-        font-size: 700%;
-        margin: 0px;
-        padding: 0px;
+        display: flex;
+        width: 100%;
+        height: auto;
+        font-size: 7rem;
         color: #74cb4b;
+        margin: 0%;
+        padding: 0%;
     }
     
     .contacto img {
@@ -381,7 +406,7 @@
     }
     
     .formInput:focus {
-        border: 3px solid #57e40c;
+        border: 2px solid #57e40c;
         ;
     }
     
@@ -407,6 +432,16 @@
         cursor: pointer;
         border-radius: 0.2em;
         font-weight: bolder;
+        text-shadow: 2px 2px 7px black;
+        transition: border 0.2s background-color 0.2s;
+    }
+    
+    .formBoton:active {
+        border: solid .1em;
+    }
+    
+    .formBoton:hover {
+        background-color: #5d5f72;
     }
     
     .looks {
@@ -423,6 +458,8 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-auto-rows: 600px;
         grid-gap: 10px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
     
     .galeria__contenedor img {
@@ -444,7 +481,7 @@
     }
     
     .colorGaleria {
-        color: #c8a289;
+        color: #c8a289 !important;
     }
     
     .galeria__contenedor img {
@@ -461,7 +498,7 @@
         z-index: 100;
     }
     
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 768px) {
         .index {
             display: flex;
             flex-direction: column;
@@ -551,12 +588,12 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 700px;
+            height: auto;
         }
         .biografia__1 section {
             display: block;
             width: 100%;
-            height: 700px;
+            height: auto;
             margin: 0.5em;
             order: 1;
             font-size: 83%;
@@ -584,18 +621,18 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 1062px;
+            height: auto;
         }
         .biografia__2 img {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
-            object-position: top center;
+            object-position: center;
         }
         .biografia__2 section {
             display: block;
             width: 100%;
-            height: 730px;
+            height: auto;
             font-family: 'Montserrat', sans-serif;
             line-height: normal;
             margin: 0.5em;
@@ -605,7 +642,7 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 600%;
+            height: auto;
             font-size: 80%;
         }
         .biografia__3 section {
@@ -615,26 +652,29 @@
         .biografia__3 img {
             display: block;
             width: 100%;
-            height: 100%;
+            height: 400px;
             object-fit: cover;
-            object-position: top center;
+            object-position: center;
         }
         .drag__tabla {
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 600px;
+            height: auto;
+            margin: 0.2rem;
+            margin-bottom: 1rem;
         }
         .drag__tabla h1 {
             width: 100%;
             font-size: 3em;
+            margin-bottom: 3rem;
         }
         .drag__tabla table {
             width: 100%;
         }
         .drag__img img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
             object-position: top center;
         }
@@ -644,16 +684,20 @@
         }
         .drag__frases ul {
             width: 100%;
+            height: auto;
             list-style: none;
             margin: auto;
             text-align: center;
+            object-position: center;
             order: 2;
         }
         .drag__frases h2 {
             width: 100%;
+            height: auto;
             line-height: normal;
             font-size: 3em;
             text-align: center;
+            margin: auto;
             order: 1;
         }
         .contacto__contenedor {
