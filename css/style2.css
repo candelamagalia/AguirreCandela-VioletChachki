@@ -127,6 +127,10 @@
         color: #699fad !important;
     }
     
+    .colorBotonNavBio {
+        background-color: #699fad;
+    }
+    
     .biografia {
         background-color: black;
     }
@@ -228,6 +232,11 @@
         }
     }
     
+    .nav_bio {
+        background-color: black !important;
+        min-height: 3rem;
+    }
+    
     .fondo1 {
         background-color: #08060b;
     }
@@ -324,6 +333,15 @@
         font-size: 6em;
         margin: .5em;
         text-shadow: 2px 2px 7px black, 2px 2px 7px black;
+    }
+    
+    .nav_drag {
+        background-color: #050b03 !important;
+        min-height: 3rem;
+    }
+    
+    .colorBotonNavDrag {
+        background-color: #e7c9bf;
     }
     
     .contacto {
@@ -444,6 +462,15 @@
         background-color: #5d5f72;
     }
     
+    .nav_contacto {
+        background-color: #050b03 !important;
+        min-height: 3rem;
+    }
+    
+    .colorBotonNavContacto {
+        background-color: aliceblue;
+    }
+    
     .looks {
         background-color: #050b03;
         line-height: normal;
@@ -482,6 +509,15 @@
     
     .colorGaleria {
         color: #c8a289 !important;
+    }
+    
+    .colorBotonNavLooks {
+        background-color: #c8a289;
+    }
+    
+    .nav_looks {
+        background-color: #050b03 !important;
+        min-height: 3rem;
     }
     
     .galeria__contenedor img {
