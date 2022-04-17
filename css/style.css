@@ -1,3 +1,5 @@
+    /* INDEX */
+    
     .index {
         background-color: #050b03;
     }
@@ -59,15 +61,22 @@
         transition: filter .5s, font-size .2s;
     }
     
-    .encabezado__menu__index,
-    .encabezado__menu {
+    .encabezado__menu__index {
         font-family: 'Fredoka', sans-serif;
         display: flex;
-        background: transparent;
+        background: inherit;
         position: relative;
         right: 30px;
         position: fixed;
         z-index: 10;
+    }
+    
+    .encabezado__menu {
+        font-family: 'Fredoka', sans-serif;
+        display: flex;
+        background: inherit;
+        width: 100%;
+        justify-content: flex-end;
     }
     
     .encabezado__menu li :hover {
@@ -99,7 +108,7 @@
     }
     
     .index__contenedor--texto h1 {
-        font-size: 5em;
+        font-size: 4em;
     }
     
     .index__contenedor--texto a {
@@ -117,7 +126,10 @@
     .index__footer a {
         text-decoration: none;
         color: aliceblue;
+        font-size: large;
+        padding: 12px;
     }
+    /* BIOGRAFIA */
     
     .colorNegro {
         color: black !important;
@@ -154,7 +166,8 @@
     }
     
     .biografia__1--titulo {
-        font-size: 7em;
+        font-size: 5em;
+        margin-top: 30%;
     }
     
     .biografia__1 img {
@@ -244,6 +257,7 @@
     .fondo2 {
         background-color: #5d4699;
     }
+    /* DRAG RACE */
     
     .drag {
         background-color: #050b03;
@@ -253,7 +267,8 @@
         display: flex;
         width: 100%;
         height: auto;
-        margin: 2rem;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
     
     .drag__tabla h1 {
@@ -261,8 +276,7 @@
         height: auto;
         font-family: 'Montserrat', sans-serif;
         line-height: normal;
-        font-size: 6em;
-        margin: .5em;
+        font-size: 4em;
         text-shadow: 2px 2px 7px black, 2px 2px 7px black;
     }
     
@@ -291,7 +305,7 @@
     
     .drag__img {
         display: flex;
-        width: 110%;
+        width: 100%;
         height: auto;
     }
     
@@ -316,7 +330,9 @@
         width: 100%;
         height: auto;
         font-family: 'Montserrat', sans-serif;
-        margin: 1rem;
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
     
     .drag__frases ul {
@@ -330,8 +346,8 @@
         height: auto;
         font-family: 'Montserrat', sans-serif;
         line-height: normal;
-        font-size: 6em;
-        margin: .5em;
+        font-size: 3em;
+        text-align: right;
         text-shadow: 2px 2px 7px black, 2px 2px 7px black;
     }
     
@@ -343,6 +359,7 @@
     .colorBotonNavDrag {
         background-color: #e7c9bf;
     }
+    /* CONTACTO */
     
     .contacto {
         background-color: #050b03;
@@ -434,8 +451,6 @@
     
     .formInputMensaje {
         resize: none;
-        /* padding: 1.8em;
-    margin-bottom: .5em; */
     }
     
     .formBoton {
@@ -470,6 +485,7 @@
     .colorBotonNavContacto {
         background-color: aliceblue;
     }
+    /* LOOKS */
     
     .looks {
         background-color: #050b03;
@@ -478,6 +494,8 @@
     
     .galeria {
         display: grid;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
     }
     
     .galeria__contenedor {
@@ -533,6 +551,7 @@
         filter: none;
         z-index: 100;
     }
+    /* RESPONSIVE */
     
     @media screen and (max-width: 768px) {
         .index {
@@ -646,6 +665,7 @@
         }
         .biografia__1--titulo {
             width: 100%;
+            margin-top: 0%;
             justify-content: center;
             font-size: 2em;
             text-align: center;
@@ -697,7 +717,6 @@
             flex-direction: column;
             width: 100%;
             height: auto;
-            margin: 0.2rem;
             margin-bottom: 1rem;
         }
         .drag__tabla h1 {
@@ -733,7 +752,6 @@
             line-height: normal;
             font-size: 3em;
             text-align: center;
-            margin: auto;
             order: 1;
         }
         .contacto__contenedor {
