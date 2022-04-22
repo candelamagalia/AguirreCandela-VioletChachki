@@ -565,12 +565,12 @@ form {
             margin: 0.5em;
             order: 1;
             font-size: 83%;
-            img {
-                width: 100%;
-                height: 200px;
-                object-position: top;
-                object-fit: cover;
-            }
+        }
+        img {
+            width: 100%;
+            height: 200px;
+            object-position: top;
+            object-fit: cover;
         }
     }
     .biografia__1--texto1 {
@@ -596,16 +596,14 @@ form {
             display: block;
             width: 100%;
             height: auto;
-            font-family: 'Montserrat', sans-serif;
-            line-height: normal;
             margin: 0.5em;
             font-size: 83%;
-            img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-                object-position: center;
-            }
+        }
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
         }
     }
     .biografia__3 {
@@ -617,13 +615,13 @@ form {
         section {
             width: 100%;
             height: auto;
-            img {
-                display: block;
-                width: 100%;
-                height: 400px;
-                object-fit: cover;
-                object-position: center;
-            }
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
         }
     }
     .drag__tabla {
@@ -636,16 +634,18 @@ form {
             width: 100%;
             font-size: 3em;
             margin-bottom: 3rem;
-            table {
-                width: 100%;
-            }
+        }
+        table {
+            width: 100%;
         }
     }
-    .drag__img img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        object-position: top center;
+    .drag__img {
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: top center;
+        }
     }
     .drag__frases {
         display: flex;
@@ -657,15 +657,15 @@ form {
             font-size: 3em;
             text-align: center;
             order: 1;
-            ul {
-                width: 100%;
-                height: auto;
-                list-style: none;
-                margin: auto;
-                text-align: center;
-                object-position: center;
-                order: 2;
-            }
+        }
+        ul {
+            width: 100%;
+            height: auto;
+            list-style: none;
+            margin: auto;
+            text-align: center;
+            object-position: center;
+            order: 2;
         }
     }
     .contacto__contenedor {

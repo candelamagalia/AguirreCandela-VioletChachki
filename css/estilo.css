@@ -508,11 +508,11 @@ form {
       margin: 0.5em;
       order: 1;
       font-size: 83%; }
-      .biografia__1 section img {
-        width: 100%;
-        height: 200px;
-        object-position: top;
-        object-fit: cover; }
+    .biografia__1 img {
+      width: 100%;
+      height: 200px;
+      object-position: top;
+      object-fit: cover; }
   .biografia__1--texto1 {
     display: flex;
     flex-direction: column; }
@@ -534,15 +534,13 @@ form {
       display: block;
       width: 100%;
       height: auto;
-      font-family: 'Montserrat', sans-serif;
-      line-height: normal;
       margin: 0.5em;
       font-size: 83%; }
-      .biografia__2 section img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        object-position: center; }
+    .biografia__2 img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center; }
   .biografia__3 {
     display: flex;
     flex-direction: column;
@@ -552,12 +550,12 @@ form {
     .biografia__3 section {
       width: 100%;
       height: auto; }
-      .biografia__3 section img {
-        display: block;
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        object-position: center; }
+    .biografia__3 img {
+      display: block;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      object-position: center; }
   .drag__tabla {
     display: flex;
     flex-direction: column;
@@ -568,8 +566,8 @@ form {
       width: 100%;
       font-size: 3em;
       margin-bottom: 3rem; }
-      .drag__tabla h1 table {
-        width: 100%; }
+    .drag__tabla table {
+      width: 100%; }
   .drag__img img {
     width: 100%;
     height: auto;
@@ -585,14 +583,14 @@ form {
       font-size: 3em;
       text-align: center;
       order: 1; }
-      .drag__frases h2 ul {
-        width: 100%;
-        height: auto;
-        list-style: none;
-        margin: auto;
-        text-align: center;
-        object-position: center;
-        order: 2; }
+    .drag__frases ul {
+      width: 100%;
+      height: auto;
+      list-style: none;
+      margin: auto;
+      text-align: center;
+      object-position: center;
+      order: 2; }
   .contacto__contenedor {
     display: flex;
     flex-direction: column; }
