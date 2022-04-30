@@ -50,6 +50,7 @@
 .colorBotonNavContacto {
   background-color: aliceblue; }
 
+
 /* INDEX */
 .index__display {
   display: flex;
@@ -70,8 +71,8 @@
 .encabezado {
   display: flex; }
 
-.encabezado__logo__index {
-  font-family: "Lobster", cursive;
+.encabezado__logo__index, .encabezado__logo, .encabezado__logo--drag {
+  font-family: 'Lobster',cursive;
   font-size: 2.5em;
   text-decoration: none;
   text-align: left;
@@ -79,57 +80,36 @@
   z-index: 10;
   transition: filter .5s; }
 
-.encabezado__logo {
-  font-family: "Lobster", cursive;
-  font-size: 2.5em;
-  text-decoration: none;
-  text-align: left;
-  margin: 10px 10px 10px 10px;
-  z-index: 10;
-  transition: filter .5s; }
-  .encabezado__logo:hover {
-    filter: brightness(1.3) contrast(1.3);
-    text-decoration: none; }
+.encabezado__logo:hover {
+  filter: brightness(1.3) contrast(1.3);
+  text-decoration: none; }
 
-.encabezado__menu__index {
+.encabezado__menu, .encabezado__menu__index {
   font-family: "Fredoka", sans-serif;
   display: flex;
+  width: 100%;
   background: inherit;
+  justify-content: flex-end; }
+  .encabezado__menu li, .encabezado__menu__index li {
+    list-style: none;
+    padding-left: 50px;
+    margin-right: 10px;
+    transition: filter .5s, font-size .2s; }
+    .encabezado__menu li:hover, .encabezado__menu__index li:hover {
+      font-size: 105%;
+      filter: brightness(1.3) contrast(1.3);
+      text-decoration: none; }
+    .encabezado__menu li a, .encabezado__menu__index li a {
+      text-decoration: none;
+      text-align: right; }
+
+.encabezado__menu__index {
+  width: auto;
+  justify-content: stretch;
   position: relative;
   right: 30px;
   position: fixed;
   z-index: 10; }
-  .encabezado__menu__index li {
-    list-style: none;
-    padding-left: 50px;
-    margin-right: 10px;
-    transition: filter .5s, font-size .2s; }
-    .encabezado__menu__index li:hover {
-      font-size: 105%;
-      filter: brightness(1.3) contrast(1.3);
-      text-decoration: none; }
-    .encabezado__menu__index li a {
-      text-decoration: none;
-      text-align: right; }
-
-.encabezado__menu {
-  font-family: "Fredoka", sans-serif;
-  display: flex;
-  background: inherit;
-  width: 100%;
-  justify-content: flex-end; }
-  .encabezado__menu li {
-    list-style: none;
-    padding-left: 50px;
-    margin-right: 10px;
-    transition: filter .5s, font-size .2s; }
-    .encabezado__menu li:hover {
-      font-size: 105%;
-      filter: brightness(1.3) contrast(1.3);
-      text-decoration: none; }
-    .encabezado__menu li a {
-      text-decoration: none;
-      text-align: right; }
 
 .index__contenedor--texto {
   color: aliceblue;
@@ -149,7 +129,6 @@
   font-size: smaller; }
   .index__footer a {
     text-decoration: none;
-    color: aliceblue;
     font-size: large;
     padding: 12px; }
 
@@ -182,67 +161,52 @@
   margin-top: 30%;
   font-family: "Montserrat", sans-serif; }
 
-.biografia__2 {
+.biografia__2, .biografia__3 {
   display: flex;
   width: 100%;
   height: 100%;
   font-family: "Montserrat", sans-serif; }
-  .biografia__2 img {
+  .biografia__2 img, .biografia__3 img {
     width: 50%;
     height: auto; }
     @supports (object-fit: cover) {
-      .biografia__2 img .biografia__2 img {
+      .biografia__2 img .biografia__2 img, .biografia__3 img .biografia__2 img, .biografia__2 img .biografia__3 img, .biografia__3 img .biografia__3 img {
         height: auto;
         object-fit: cover;
         object-position: top center; } }
-  .biografia__2 section {
+  .biografia__2 section, .biografia__3 section {
     width: 50%;
     line-height: normal;
     margin: .5em; }
-    .biografia__2 section a {
+    .biografia__2 section a, .biografia__3 section a {
       text-decoration: none;
       color: aliceblue; }
 
-.biografia__3 {
-  display: flex;
-  width: 100%;
-  height: auto;
-  font-family: "Montserrat", sans-serif; }
-  .biografia__3 img {
-    width: 50%;
-    height: auto; }
-    @supports (object-fit: cover) {
-      .biografia__3 img .biografia__3 img {
-        height: auto;
-        object-fit: cover;
-        object-position: top center; } }
-  .biografia__3 section {
-    width: 50%;
-    line-height: normal;
-    margin: .5em; }
-    .biografia__3 section a {
-      text-decoration: none;
-      color: aliceblue; }
+@supports (object-fit: cover) {
+  .biografia__3 img .biografia__3 img {
+    height: auto;
+    object-fit: cover;
+    object-position: top center; } }
 
 .nav_bio {
   background-color: black !important;
   min-height: 3rem; }
 
 /* DRAG RACE */
-.drag__tabla {
+.drag__tabla, .drag__frases {
   display: flex;
   width: 100%;
   height: auto;
   margin-top: 5%;
   margin-bottom: 5%; }
-  .drag__tabla h1 {
+  .drag__tabla h1, .drag__frases h1 {
     width: 50%;
     height: auto;
     font-family: "Montserrat", sans-serif;
     line-height: normal;
     font-size: 4em;
     text-shadow: 2px 2px 7px black, 2px 2px 7px black; }
-  .drag__tabla table {
+  .drag__tabla table, .drag__frases table {
     width: 50%;
     height: auto;
     font-family: "Montserrat", sans-serif;
@@ -250,12 +214,7 @@
     text-align: center; }
 
 .encabezado__logo--drag {
-  font-family: "Lobster", cursive;
-  font-size: 2.5em;
   text-shadow: 2px 2px 7px black, 2px 2px 7px black;
-  text-decoration: none;
-  text-align: left;
-  margin: 10px 10px 10px 10px;
   transition: filter .5s; }
   .encabezado__logo--drag:hover {
     filter: brightness(1.3) contrast(1.3);
@@ -274,13 +233,8 @@
         object-position: top center; } }
 
 .drag__frases {
-  display: flex;
-  width: 100%;
-  height: auto;
-  font-family: "Montserrat", sans-serif;
   margin: auto;
-  margin-top: 5%;
-  margin-bottom: 5%; }
+  font-family: "Montserrat", sans-serif; }
   .drag__frases h2 {
     width: 50%;
     height: auto;
@@ -314,10 +268,11 @@
 .contacto__contenedor--textos {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: auto;
   height: auto;
   line-height: normal;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif !important;
+  justify-content: flex-start; }
   .contacto__contenedor--textos h1 {
     display: flex;
     width: 100%;
@@ -326,15 +281,15 @@
     color: #74cb4b;
     margin: 0%;
     padding: 0%; }
-    .contacto__contenedor--textos h1 h4 {
-      display: flex;
-      width: 100%;
-      height: auto;
-      font-size: 1rem;
-      margin-top: 5%;
-      color: aliceblue;
-      margin: 0%;
-      padding: 0%; }
+  .contacto__contenedor--textos h4 {
+    display: flex;
+    width: 100%;
+    height: auto;
+    font-size: 1rem;
+    margin-top: 5%;
+    color: aliceblue;
+    margin: 0%;
+    padding: 0%; }
 
 form {
   width: 50%;
@@ -437,21 +392,21 @@ form {
   .encabezado__menu__index {
     position: relative;
     font-size: 78%;
-    left: -43px;
+    right: 40px;
     justify-content: center; }
     .encabezado__menu__index ul {
       margin: auto;
       padding: 0px; }
-      .encabezado__menu__index ul li {
-        list-style: none;
-        margin: auto;
-        text-align: center; }
-  .encabezado__index .encabezado__logo__index {
+    .encabezado__menu__index li {
+      list-style: none;
+      margin: auto;
+      text-align: center; }
+  .encabezado__index .encabezado__logo__index, .encabezado__index .encabezado__logo, .encabezado__index .encabezado__logo--drag {
     display: flex;
     order: 1;
     position: relative;
     bottom: 400px; }
-  .encabezado__logo__index {
+  .encabezado__logo__index, .encabezado__logo, .encabezado__logo--drag {
     flex-direction: column;
     text-align: center; }
   .index__display {
@@ -473,20 +428,20 @@ form {
     order: 3; }
   .encabezado {
     flex-direction: column; }
-  .encabezado__menu {
+  .encabezado__menu, .encabezado__menu__index {
     position: relative;
-    left: -41px;
+    right: 40px;
     font-size: 71%;
     justify-content: center;
     text-align: center;
     right: 0px; }
-    .encabezado__menu ul {
+    .encabezado__menu ul, .encabezado__menu__index ul {
       margin: auto;
       padding: 0px; }
-      .encabezado__menu ul li {
-        list-style: none;
-        margin: auto;
-        text-align: center; }
+    .encabezado__menu li, .encabezado__menu__index li {
+      list-style: none;
+      margin: auto;
+      text-align: center; }
   .encabezado__logo--drag,
   .encabezado__logo {
     text-align: center; }
@@ -525,18 +480,18 @@ form {
     flex-wrap: wrap;
     order: 2;
     position: relative; }
-  .biografia__2 {
+  .biografia__2, .biografia__3 {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: auto; }
-    .biografia__2 section {
+    .biografia__2 section, .biografia__3 section {
       display: block;
       width: 100%;
       height: auto;
       margin: 0.5em;
       font-size: 83%; }
-    .biografia__2 img {
+    .biografia__2 img, .biografia__3 img {
       width: 100%;
       height: 200px;
       object-fit: cover;
@@ -556,17 +511,17 @@ form {
       height: 400px;
       object-fit: cover;
       object-position: center; }
-  .drag__tabla {
+  .drag__tabla, .drag__frases {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
     margin-bottom: 1rem; }
-    .drag__tabla h1 {
+    .drag__tabla h1, .drag__frases h1 {
       width: 100%;
       font-size: 3em;
       margin-bottom: 3rem; }
-    .drag__tabla table {
+    .drag__tabla table, .drag__frases table {
       width: 100%; }
   .drag__img img {
     width: 100%;
@@ -595,7 +550,9 @@ form {
     display: flex;
     flex-direction: column; }
   .contacto__contenedor--textos {
-    width: 100%; }
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap; }
     .contacto__contenedor--textos h1 {
       font-size: 444%; }
   .contacto img {
@@ -603,3 +560,15 @@ form {
   .galeria__contenedor {
     display: flex;
     flex-direction: column; } }
+
+.youtube {
+  color: #FF0000; }
+
+.facebook {
+  color: #4267B2; }
+
+.instagram {
+  color: #C13584; }
+
+.twitter {
+  color: #1DA1F2; }

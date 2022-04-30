@@ -1,6 +1,5 @@
-@import "tipografias";
-@import "fondos";
-@import "variables";
+@import "tipografias", "fondos", "variables", "mixin", "map";
+
 
 /* INDEX */
 
@@ -24,12 +23,11 @@
 
 .encabezado__index,
 .encabezado {
-    display: flex;
+    display: $display;
 }
 
 .encabezado__logo__index {
-    font-family: $tipografia-logo;
-    font-size: 2.5em;
+    @include logo;
     text-decoration: none;
     text-align: left;
     margin: 10px 10px 10px 10px;
@@ -38,66 +36,45 @@
 }
 
 .encabezado__logo {
-    font-family: $tipografia-logo;
-    font-size: 2.5em;
-    text-decoration: none;
-    text-align: left;
-    margin: 10px 10px 10px 10px;
-    z-index: 10;
-    transition: filter .5s;
+    @extend .encabezado__logo__index;
     &:hover {
         filter: brightness(1.3) contrast(1.3);
         text-decoration: none;
     }
 }
 
-.encabezado__menu__index {
+.encabezado__menu {
     font-family: $tipografia-titulos;
     display: flex;
-    background: inherit;
+    width: 100%;
+    @include menu (inherit,flex-end);
+    li {
+        list-style: none;
+        padding-left: 50px;
+        margin-right: 10px;
+        transition: filter .5s, font-size .2s;
+        &:hover {
+            font-size: 105%;
+            filter: brightness(1.3) contrast(1.3);
+            text-decoration: none;
+        }
+        a {
+            text-decoration: none;
+            text-align: right;
+        }
+    }
+}
+.encabezado__menu__index {
+    @extend .encabezado__menu; 
+    width: auto;
+    justify-content: stretch;
     position: relative;
     right: $posicion-menu;
     position: fixed;
     z-index: 10;
-    li {
-        list-style: none;
-        padding-left: 50px;
-        margin-right: 10px;
-        transition: filter .5s, font-size .2s;
-        &:hover {
-            font-size: 105%;
-            filter: brightness(1.3) contrast(1.3);
-            text-decoration: none;
-        }
-        a {
-            text-decoration: none;
-            text-align: right;
-        }
-    }
 }
 
-.encabezado__menu {
-    font-family: $tipografia-titulos;
-    display: flex;
-    background: inherit;
-    width: 100%;
-    justify-content: flex-end;
-    li {
-        list-style: none;
-        padding-left: 50px;
-        margin-right: 10px;
-        transition: filter .5s, font-size .2s;
-        &:hover {
-            font-size: 105%;
-            filter: brightness(1.3) contrast(1.3);
-            text-decoration: none;
-        }
-        a {
-            text-decoration: none;
-            text-align: right;
-        }
-    }
-}
+
 
 .index__contenedor--texto {
     color: aliceblue;
@@ -190,30 +167,15 @@
         }
     }
 }
-
 .biografia__3 {
-    display: flex;
-    width: 100%;
-    height: auto;
-    font-family: $tipografia-general;
+    @extend .biografia__2;
     img {
-        width: $split-screen;
-        height: auto;
         @supports (object-fit: cover) {
             .biografia__3 img {
                 height: auto;
                 object-fit: cover;
                 object-position: top center;
             }
-        }
-    }
-    section {
-        width: $split-screen;
-        line-height: normal;
-        margin: .5em;
-        a {
-            text-decoration: none;
-            color: aliceblue;
         }
     }
 }
@@ -249,13 +211,10 @@
     }
 }
 
+
 .encabezado__logo--drag {
-    font-family: $tipografia-logo;
-    font-size: 2.5em;
+    @extend .encabezado__logo__index;
     text-shadow: 2px 2px 7px black, 2px 2px 7px black;
-    text-decoration: none;
-    text-align: left;
-    margin: 10px 10px 10px 10px;
     transition: filter .5s;
     &:hover {
         filter: brightness(1.3) contrast(1.3);
@@ -280,13 +239,9 @@
 }
 
 .drag__frases {
-    display: flex;
-    width: 100%;
-    height: auto;
-    font-family: $tipografia-general;
+    @extend .drag__tabla;
     margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    font-family: $tipografia-general;
     h2 {
         width: $split-screen;
         height: auto;
@@ -330,10 +285,11 @@
 .contacto__contenedor--textos {
     display: flex;
     flex-direction: column;
-    width: $split-screen;
+    width: auto;
     height: auto;
     line-height: normal;
-    font-family: $tipografia-general;
+    font-family: $tipografia-general !important ;
+    justify-content: flex-start;
     h1 {
         display: flex;
         width: 100%;
@@ -342,17 +298,18 @@
         color: #74cb4b;
         margin: 0%;
         padding: 0%;
-        h4 {
-            display: flex;
-            width: 100%;
-            height: auto;
-            font-size: 1rem;
-            margin-top: 5%;
-            color: aliceblue;
-            margin: 0%;
-            padding: 0%;
-        }
     }
+    h4 {
+        display: flex;
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
+        margin-top: 5%;
+        color: aliceblue;
+        margin: 0%;
+        padding: 0%;
+    }
+    
 }
 
 form {
@@ -469,27 +426,28 @@ form {
 
 @media screen and (max-width: 768px) {
     .index {
-        display: flex;
+        display: $display;
         flex-direction: column;
     }
     .encabezado__index {
-        display: flex;
+        display: $display;
         flex-direction: column;
     }
     .encabezado__menu__index {
         position: relative;
         font-size: 78%;
-        right: $posicion-menu+10;
+        right: $posicion-menu + 10;
         justify-content: center;
         ul {
             margin: auto;
             padding: 0px;
+        }
             li {
                 list-style: none;
                 margin: auto;
                 text-align: center;
             }
-        }
+        
     }
     .encabezado__index .encabezado__logo__index {
         display: flex;
@@ -526,7 +484,7 @@ form {
     }
     .encabezado__menu {
         position: relative;
-        left: -41px;
+        right: $posicion-menu + 10;
         font-size: 71%;
         justify-content: center;
         text-align: center;
@@ -534,12 +492,13 @@ form {
         ul {
             margin: auto;
             padding: 0px;
+        }
             li {
                 list-style: none;
                 margin: auto;
                 text-align: center;
             }
-        }
+        
     }
     .encabezado__logo--drag,
     .encabezado__logo {
@@ -648,7 +607,7 @@ form {
         }
     }
     .drag__frases {
-        display: flex;
+        display: $display;
         flex-direction: column;
         h2 {
             width: 100%;
@@ -674,6 +633,9 @@ form {
     }
     .contacto__contenedor--textos {
         width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+
         h1 {
             font-size: 444%;
         }
@@ -682,7 +644,17 @@ form {
         width: 100%;
     }
     .galeria__contenedor {
-        display: flex;
+        display: $display;
         flex-direction: column;
+    }
+}
+
+
+$mapRedes: (youtube:#FF0000, facebook:#4267B2, instagram:#C13584, twitter:#1DA1F2);
+
+
+@each $red, $color in $mapRedes {
+    .#{$red} {
+        color: $color;
     }
 }
