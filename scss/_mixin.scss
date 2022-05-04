@@ -1,12 +1,8 @@
 
-/*MIXIN CON PARAMETROS*/
-
 @mixin menu ($background, $justify-content) {
     background: $background;
     justify-content: $justify-content;    
 }
-
-/*MIXIN SIN PARAMETROS*/
 
 @mixin logo {
     font-family: 'Lobster',cursive;
