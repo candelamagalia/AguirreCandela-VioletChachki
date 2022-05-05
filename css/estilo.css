@@ -50,7 +50,8 @@
 .colorBotonNavContacto {
   background-color: aliceblue; }
 
-
+/*MIXIN CON PARAMETROS*/
+/*MIXIN SIN PARAMETROS*/
 /* INDEX */
 .index__display {
   display: flex;
@@ -129,6 +130,7 @@
   font-size: smaller; }
   .index__footer a {
     text-decoration: none;
+    color: aliceblue;
     font-size: large;
     padding: 12px; }
 
