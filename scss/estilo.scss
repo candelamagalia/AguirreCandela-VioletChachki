@@ -421,7 +421,6 @@ form {
 
     .encabezado__menu {
         position: relative;
-        right: $posicion-menu + 10;
         font-size: 71%;
         justify-content: center;
         text-align: center;
@@ -446,8 +445,7 @@ form {
     .encabezado__menu__index {
         position: relative;
         font-size: 78%;
-        right: $posicion-menu + 7;
-        justify-content: center;
+        right: $posicion-menu - 10;
         ul {
             margin: 0%;
             padding: 0px;
@@ -472,21 +470,17 @@ form {
     }
     .index__display {
         flex-direction: column;
-        display: flex;
     }
     .index__derecha {
         position: relative;
         top: 94px;
         width: 100%;
         height: 400px;
-        background-size: cover;
-        align-items: center;
         order: 2;
     }
     .index__izquierda {
         width: 100%;
         height: auto;
-        flex-direction: column;
         order: 3;
     }
     .encabezado {
@@ -498,8 +492,6 @@ form {
         text-align: center;
     }
     .index__contenedor--texto {
-        flex-direction: column;
-        font-size: 100%;
         h1 {
             font-size: 400%;
         }
@@ -544,14 +536,9 @@ form {
 
     
     .drag__tabla {
-        display: flex;
         flex-direction: column;
-        width: 100%;
-        height: auto;
-        margin-bottom: 1rem;
         h1 {
             width: 100%;
-            font-size: 3em;
             margin-bottom: 3rem;
         }
         table {
@@ -560,35 +547,25 @@ form {
     }
     .drag__img {
         img {
-            width: 100%;
             height: auto;
             object-fit: cover;
             object-position: top center;
         }
     }
     .drag__frases {
-        display: $display;
-        flex-direction: column;
         h2 {
             width: 100%;
-            height: auto;
             line-height: normal;
-            font-size: 3em;
+            font-size: 2em;
             text-align: center;
             order: 1;
         }
         ul {
             width: 100%;
-            height: auto;
-            list-style: none;
-            margin: auto;
-            text-align: center;
-            object-position: center;
             order: 2;
         }
     }
     .contacto__contenedor {
-        display: flex;
         flex-direction: column;
     }
     .contacto__contenedor--textos {
