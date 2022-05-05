@@ -114,10 +114,10 @@
     img {
         width: $split-screen;
         height: 100%;
+        object-fit: cover;
         @supports (object-fit: cover) {
             .biografia__1 img {
                 height: auto;
-                object-fit: cover;
                 object-position: top center;
             }
         }
@@ -142,17 +142,15 @@
 }
 
 .biografia__2 {
-    display: flex;
-    width: 100%;
-    height: 100%;
+    display: $display;
     font-family: $tipografia-general;
     img {
         width: $split-screen;
         height: auto;
+        object-fit: cover;
         @supports (object-fit: cover) {
             .biografia__2 img {
                 height: auto;
-                object-fit: cover;
                 object-position: top center;
             }
         }
@@ -172,7 +170,6 @@
     img {
         @supports (object-fit: cover) {
             .biografia__3 img {
-                height: auto;
                 object-fit: cover;
                 object-position: top center;
             }
@@ -190,8 +187,6 @@
 
 .drag__tabla {
     display: flex;
-    width: 100%;
-    height: auto;
     margin-top: 5%;
     margin-bottom: 5%;
     h1 {
@@ -199,7 +194,6 @@
         height: auto;
         font-family: $tipografia-general;
         line-height: normal;
-        font-size: 4em;
         text-shadow: 2px 2px 7px black, 2px 2px 7px black;
     }
     table {
@@ -224,7 +218,6 @@
 
 .drag__img {
     display: flex;
-    width: 100%;
     height: auto;
     img {
         width: 100%;
@@ -244,7 +237,6 @@
     font-family: $tipografia-general;
     h2 {
         width: $split-screen;
-        height: auto;
         font-family: $tipografia-general;
         line-height: normal;
         font-size: 3em;
@@ -253,8 +245,6 @@
     }
     ul {
         width: $split-screen;
-        height: auto;
-        list-style: none;
     }
 }
 
@@ -288,8 +278,9 @@
     width: auto;
     height: auto;
     line-height: normal;
-    font-family: $tipografia-general !important ;
-    justify-content: flex-start;
+    pre {
+        display: $display;
+    }
     h1 {
         display: flex;
         width: 100%;
@@ -297,7 +288,6 @@
         font-size: 7rem;
         color: #74cb4b;
         margin: 0%;
-        padding: 0%;
     }
     h4 {
         display: flex;
@@ -307,7 +297,6 @@
         margin-top: 5%;
         color: aliceblue;
         margin: 0%;
-        padding: 0%;
     }
     
 }
@@ -429,15 +418,14 @@ form {
         display: $display;
         flex-direction: column;
     }
-    .encabezado__index {
-        display: $display;
-        flex-direction: column;
-    }
-    .encabezado__menu__index {
+
+    .encabezado__menu {
         position: relative;
-        font-size: 78%;
         right: $posicion-menu + 10;
+        font-size: 71%;
         justify-content: center;
+        text-align: center;
+        right: 0px;
         ul {
             margin: auto;
             padding: 0px;
@@ -445,6 +433,29 @@ form {
             li {
                 list-style: none;
                 margin: auto;
+                text-align: center;
+            }
+        
+    }
+
+
+    .encabezado__index {
+        display: $display;
+        flex-direction: column;
+    }
+    .encabezado__menu__index {
+        position: relative;
+        font-size: 78%;
+        right: $posicion-menu + 7;
+        justify-content: center;
+        ul {
+            margin: 0%;
+            padding: 0px;
+        }
+            li {
+                list-style: none;
+                margin: 0% 7% 0% 7%;
+                padding: 0%;
                 text-align: center;
             }
         
@@ -462,7 +473,6 @@ form {
     .index__display {
         flex-direction: column;
         display: flex;
-        width: 100%;
     }
     .index__derecha {
         position: relative;
@@ -482,24 +492,7 @@ form {
     .encabezado {
         flex-direction: column;
     }
-    .encabezado__menu {
-        position: relative;
-        right: $posicion-menu + 10;
-        font-size: 71%;
-        justify-content: center;
-        text-align: center;
-        right: 0px;
-        ul {
-            margin: auto;
-            padding: 0px;
-        }
-            li {
-                list-style: none;
-                margin: auto;
-                text-align: center;
-            }
-        
-    }
+
     .encabezado__logo--drag,
     .encabezado__logo {
         text-align: center;
@@ -509,21 +502,14 @@ form {
         font-size: 100%;
         h1 {
             font-size: 400%;
-            flex-wrap: wrap;
         }
     }
     .biografia__1 {
-        display: flex;
         flex-direction: column;
-        width: 100%;
-        height: auto;
         section {
-            display: block;
             width: 100%;
-            height: auto;
-            margin: 0.5em;
+            margin: 0 0.5em 0 0;
             order: 1;
-            font-size: 83%;
         }
         img {
             width: 100%;
@@ -532,57 +518,31 @@ form {
             object-fit: cover;
         }
     }
-    .biografia__1--texto1 {
-        display: flex;
-        flex-direction: column;
-    }
+
     .biografia__1--titulo {
-        width: 100%;
-        margin-top: 0%;
-        justify-content: center;
+        margin-top: 5%;
         font-size: 2em;
-        text-align: center;
-        flex-wrap: wrap;
         order: 2;
-        position: relative;
+        text-align: center;
     }
     .biografia__2 {
-        display: flex;
         flex-direction: column;
-        width: 100%;
-        height: auto;
         section {
-            display: block;
-            width: 100%;
-            height: auto;
-            margin: 0.5em;
             font-size: 83%;
+            width: 100%;
         }
         img {
             width: 100%;
             height: 200px;
-            object-fit: cover;
-            object-position: center;
         }
     }
     .biografia__3 {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        font-size: 80%;
-        section {
-            width: 100%;
-            height: auto;
-        }
         img {
-            display: block;
-            width: 100%;
             height: 400px;
-            object-fit: cover;
-            object-position: center;
         }
     }
+
+    
     .drag__tabla {
         display: flex;
         flex-direction: column;
@@ -637,7 +597,7 @@ form {
         flex-wrap: wrap;
 
         h1 {
-            font-size: 444%;
+            font-size: 425%;
         }
     }
     .contacto img {
@@ -647,7 +607,7 @@ form {
         display: $display;
         flex-direction: column;
     }
-}
+
 
 
 $mapRedes: (youtube:#FF0000, facebook:#4267B2, instagram:#C13584, twitter:#1DA1F2);
@@ -657,4 +617,5 @@ $mapRedes: (youtube:#FF0000, facebook:#4267B2, instagram:#C13584, twitter:#1DA1F
     .#{$red} {
         color: $color;
     }
+}
 }
