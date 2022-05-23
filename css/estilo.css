@@ -480,9 +480,13 @@ form {
   .contacto__contenedor--textos {
     width: 100%;
     flex-direction: column;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    align-items: center; }
     .contacto__contenedor--textos h1 {
-      font-size: 425%; }
+      font-size: 425%;
+      object-position: center; }
+    .contacto__contenedor--textos h4 {
+      justify-content: center; }
   .contacto img {
     width: 100%; }
   .galeria__contenedor {

@@ -572,9 +572,13 @@ form {
         width: 100%;
         flex-direction: column;
         flex-wrap: wrap;
-
+        align-items: center;
         h1 {
             font-size: 425%;
+            object-position: center;
+        }
+        h4{
+            justify-content: center;
         }
     }
     .contacto img {
